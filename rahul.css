@@ -1,0 +1,59 @@
+/* Navbar */
+.nevlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #262525;
+}
+
+/* Navbar Links */
+.nevlist a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.nevlist a:hover {
+    color: #5DB9EE;
+}
+
+/* Underline Effect */
+.nevlist a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #5DB9EE;
+    transition: 0.3s ease;
+}
+
+.nevlist a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nevlist {
+        gap: 1rem;
+        height: 10vh;
+        padding: 0 10px;
+    }
+
+    .nevlist a {
+        font-size: 0.75rem;
+    }
+}
